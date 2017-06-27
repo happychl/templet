@@ -1,0 +1,32 @@
+1.安装package control；
+按（ctrl+·）调出命令行窗口，输入
+import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())
+
+2.常用插件；
+Emmet（需要pyv8包）
+HTTP/CSS/JS Prettify（需要node）
+ALL Autocomplete(跨文件自动补全)
+DocBlockr(/**+tab为方法添加注释)
+AutoFileName(自动补全文件名)
+Jade
+SCSS
+*ColorPicker(ctrl+shift+c调出调色盘)
+
+3.配置自动保存
+settings->user里添加
+"save_on_focus_lost": true
+
+4.好用的npm服务器插件
+http-server
+安装：
+npm i http-server -g -d
+使用：
+http-server
+-o 自动打开浏览器
+-a 配置ip（0.0.0.0）
+-p 配置端口（8080）
+-s 禁止输出日志
+--cors 启用CORS
+-P 代理
+-S 启用https
+-h 帮助

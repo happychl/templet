@@ -1,0 +1,18 @@
+.wrap {
+	width: 100px;
+	height: 100px;
+	border: 1px solid #ff0;
+	background-color: #fff;
+}
+
+.icon:after {
+	content: '';
+	background: url(../image/sprite.png);
+	background-position: -56px -31px;
+}
+
+.icon1:after {
+	content: '';
+	background: url(../image/sprite.png);
+	background-position: -0px -0px;
+}
