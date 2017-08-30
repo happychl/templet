@@ -4,8 +4,8 @@ const glob = require("glob");
 // const CleanWebpackPlugin = require('clean-webpack-plugin');
 // const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-const DEV = path.resolve(__dirname, "resources/assets/web/script/");
-const OUTPUT = path.resolve(__dirname, "public/web/script/");
+const DEV = path.resolve(__dirname, "src/script/");
+const OUTPUT = path.resolve(__dirname, "dist/script/");
 
 var entries = (function() {
     var entryFiles = glob.sync(DEV + '/*.js'),
@@ -24,7 +24,7 @@ var entries = (function() {
 module.exports = {
     devtool: '#source-map',
     entry: Object.assign(entries, {
-        'vendor': ['jquery', 'jquery.easing', DEV + '/lib/jquery.base64.js', DEV + '/lib/jquery-hightlight.js', DEV + '/lib/jquery.actual.js', DEV + '/lib/jquery.qrcode.js']
+        'vendor': ['jquery']
     }),
     output: {
         path: OUTPUT,
