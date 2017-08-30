@@ -96,7 +96,7 @@ gulp.task('server', function() {
         startPath: '/src/app'
     });
 
-    gulp.watch(appSrc + '**/*.jade', ['jade']);
+    gulp.watch(appSrc + '**/*.pug', ['pug']);
     gulp.watch(styleSrc + '**/*.scss', ['sass']);
     gulp.watch(scriptSrc + '**/*.js', ['js']);
     gulp.watch(imgSrc + '*', ['img']);
